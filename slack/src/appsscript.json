@@ -1,22 +1,29 @@
 {
-  "dataStudio": {
-    "name": "Slack message Connector",
-    "company": "Seo Gregory Pallichirayil",
-    "companyUrl": "",
-    "logoUrl": "https://www.gstatic.com/images/branding/product/1x/google_fonts_48dp.png",
-    "addonUrl": "https://api.slack.com/methods/channels.history",
-     "supportUrl": "https://developers.google.com/datastudio/connector/faq",
-    "description": "This connector can connect to your any specified Slack channel, and bring the data to the Data Studio.",
-    "shortDescription": "This Connector uses Slack API to fetch messages from any channel.",
-    "authType": ["NONE"],
-    "feeType": ["FREE"],
-    "sources": [""],
-    "templates": {
-      "default": ""
-    }
+  "timeZone": "Pacific/Pago_Pago",
+  "dependencies": {
+    "libraries": [{
+      "userSymbol": "OAuth2",
+      "libraryId": "1B7FSrk5Zi6L1rSxxTDgDEUsPzlukDsi4KGuTMorsTQHhGBzBkMun4iDF",
+      "version": "31"
+    }]
   },
   "urlFetchWhitelist": [
-    "https://slack.com/api/channels.history"
-  ]
+    "https://slack.com/api/channels.history",
+    "https://slack.com/api/oauth.access"
+  ],
+  "dataStudio": {
+    "name": "Slack message Connector",
+    "logoUrl": "",
+    "company": "Data Studio Developer Relations",
+    "addonUrl": "",
+    "supportUrl": "",
+    "description": "This connector queries messages from a slack channel.",
+    "sources": ["SLACK"],
+    "templates": {
+      "default": ""
+    },
+    "shortDescription": "This Connector uses Slack API to fetch messages from any channel.",
+    "authType": ["OAUTH2"],
+    "feeType": ["FREE"]
+  }
 }
-
